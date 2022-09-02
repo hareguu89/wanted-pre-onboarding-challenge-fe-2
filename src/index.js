@@ -1,51 +1,39 @@
-/**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
- */
-function Book(title, author) {}
 
-/**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+  /**
+ * @typedef { Object } Todo
+ * @property { number } id 
+ * @property { string } contents
+ * @property { boolean } isCompleted
+ * @property { string } category
+ * @property { string[] } [tags]
  */
-function foo() {}
 
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
+/** @function _create
+ * @param { string } id
+ * @param { string } [contents]
+ * @param { string } category
+ * @param { string[] } [tags]
  */
-function bar() {}
+function _create(id, contents, category, tags) {}
 
-/**
- * Generic dairy product.
- * @constructor
+/** @function _read
+ * @param { number } id
+ * @returns { Todo } Todo
  */
-function DairyProduct() {}
+function _read(id) { return Todo }
 
-/**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+/** @function _update
+ * @param { number } id
+ * @param { string } [contents]
+ * @param { boolean } [isCompleted]
+ * @param { string } [category]
+ * @param { number[] } [tagIndex]
+ * @param { string[] } [tags]
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
+function _update(id, contents, isCompleted, category, tagIndex, tags) {}
 
-/**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
+ /** @function _delete
+ * @param { number } id
+ * @param { string[] } [tags]
  */
-function Milk() {}
-
-/**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
- */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+function _delete(id, tags) {}
