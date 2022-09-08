@@ -1,12 +1,17 @@
 {
-	"name": "jsdoc-boilerplate",
+	"name": "wanted-pre-onboarding-frontend2",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"start": "parcel serve ./src/index.html",
+		"build": "parcel build ./src/index.html",
 		"docs": "jsdoc -c jsdoc.json"
 	},
 	"devDependencies": {
 		"jsdoc": "^3.6.11"
+	},
+	"dependencies": {
+		"parcel": "^2.7.0"
 	}
 }

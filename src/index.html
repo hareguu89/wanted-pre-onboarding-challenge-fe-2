@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <form id="form">
+      <div class="select">
+        <div>
+          <h2>Contents</h2>
+          <input name="contents" type="text" class="todo-contents" value="" />
+        </div>
+        
+      
+      
+        <div>
+          <h2> Category </h2>
+          <select name="category" class="todo-category">
+            <option value="Housework"> Housework </option>
+            <option value="Study"> Study </option>
+            <option value="Work out"> Work out</option>
+          </select>
+        </div>
+        
+        <div>
+          <h2> Tags </h2>
+          <select name="tags" class="todo-tags">
+            <option value="all"> All </option>
+            <option value="Done"> Done </option>
+            <option value="Not yet"> Not yet </option>
+          </select>
+        </div>
+
+        
+        <button class="todo-button" type="submit">
+          Add
+        </button>
+      </div>
+    </form>
+
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
